@@ -30,6 +30,7 @@ const initialState = {
   userSignin: { userInfo } 
 };
 
+// In order to automatically execute reducer when call dispatch function
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
@@ -47,6 +48,7 @@ const reducer = combineReducers({
   orderDelete: orderDeleteReducer,
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// parameter reducer: automatically call reducer and return new state when store recieves actions
 const store = createStore(reducer, initialState, composeEnhancer(applyMiddleware(thunk)));
 
 export default store;

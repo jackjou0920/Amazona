@@ -7,6 +7,7 @@ import {
 } from '../constants/userConstants';
 
 const signin = (email, password) => async (dispatch) => {
+  // dispatch is the only way for view action, the parameter is a action
   dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
   try {
     const { data } = await Axios.post("/api/users/signin", { email, password });

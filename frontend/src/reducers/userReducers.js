@@ -4,6 +4,8 @@ import {
   USER_UPDATE_REQUEST,  USER_UPDATE_SUCCESS, USER_UPDATE_FAIL, USER_LOGOUT
 } from "../constants/userConstants";
 
+// Parameters: current state and action
+// Return new state
 function userSigninReducer(state = {}, action) {
   switch (action.type) {
     case USER_SIGNIN_REQUEST:

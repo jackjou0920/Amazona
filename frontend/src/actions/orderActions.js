@@ -8,6 +8,7 @@ import {
   ORDER_LIST_REQUEST, ORDER_LIST_SUCCESS, ORDER_LIST_FAIL
 } from "../constants/orderConstants";
 
+// Action Creator
 const createOrder = (order) => async (dispatch, getState) => {
   try {
     dispatch({ type: ORDER_CREATE_REQUEST, payload: order });

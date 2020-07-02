@@ -2,6 +2,7 @@ import { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_
 import axios from 'axios';
 import Axios from 'axios';
 
+// Action Creator
 const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });

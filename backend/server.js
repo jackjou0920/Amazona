@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express'; // Node.js library for addressing HTTP traffic
 import dotenv from 'dotenv';
 import config from './config';
 import mongoose from 'mongoose';
@@ -16,6 +16,12 @@ mongoose.connect(mongodbUrl, {
   useCreateIndex: true
 }).catch(error => console.log(error.reason));
 
+/* 
+Express is the role of Controller
+HTTP request to port 5000, and into express by node
+Express will decide a route to handle depending on rhe request
+The route returns a response to the node and back to HTTP
+*/
 const app = express();
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
